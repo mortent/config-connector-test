@@ -1,0 +1,16 @@
+domain: cnrm.cloud.google.com
+layout:
+- go.kubebuilder.io/v3
+projectName: config-connector-test
+repo: github.com/mortent/config-connector-test
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: cnrm.cloud.google.com
+  group: test
+  kind: Stub
+  path: github.com/mortent/config-connector-test/api/v1beta1
+  version: v1beta1
+version: "3"

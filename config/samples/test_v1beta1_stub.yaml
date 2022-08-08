@@ -1,0 +1,24 @@
+apiVersion: test.cnrm.cloud.google.com/v1beta1
+kind: Stub
+metadata:
+  name: stub-sample
+spec:
+  conditionSequence:
+  - latencySeconds: 5
+    condition:
+      type: Ready
+      status: "False"
+      reason: UpdateFailed
+      message: Update has failed for testing
+  - latencySeconds: 5
+    condition:
+      type: Ready
+      status: "False"
+      reason: DependencyInvalid
+      message: Update has failed for testing      
+  - latencySeconds: 5
+    condition:
+      type: Ready
+      status: "True"
+      reason: Ready
+      message: Update successful

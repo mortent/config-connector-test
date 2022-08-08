@@ -1,0 +1,24 @@
+# permissions for end users to edit stubs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: stub-editor-role
+rules:
+- apiGroups:
+  - test.cnrm.cloud.google.com
+  resources:
+  - stubs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - test.cnrm.cloud.google.com
+  resources:
+  - stubs/status
+  verbs:
+  - get
